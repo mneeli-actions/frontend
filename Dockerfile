@@ -32,7 +32,7 @@
 
 
 
-FROM 1.28-alpine
+FROM nginx:1.28-alpine
 
 RUN rm -f /usr/share/nginx/html/index.html
 RUN rm -f /etc/nginx/nginx.conf
