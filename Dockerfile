@@ -32,7 +32,10 @@
 
 
 
-FROM nginx:1.24.0
+FROM nginx:1.28-alpine
+
+# Upgrade all packages to get latest security patches
+RUN apk update && apk upgrade --no-cache
 
 RUN rm -f /usr/share/nginx/html/index.html
 RUN rm -f /etc/nginx/nginx.conf
